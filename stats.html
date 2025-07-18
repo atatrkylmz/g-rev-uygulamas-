@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProTask - İstatistik</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Kanban</a>
+    <a href="calendar.html">Takvim</a>
+    <a href="stats.html" class="active">İstatistik</a>
+  </nav>
+
+  <h2 style="text-align:center;">Görev İstatistikleri</h2>
+  <div style="display:flex; justify-content:center; align-items:center;">
+    <canvas id="taskChart" style="max-width:300px; max-height:300px;"></canvas>
+  </div>
+
+  <script src="stats.js"></script>
+</body>
+</html>

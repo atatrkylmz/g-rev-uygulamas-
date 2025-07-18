@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProTask - Kanban</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="active">Kanban</a>
+    <a href="calendar.html">Takvim</a>
+    <a href="stats.html">İstatistik</a>
+    <button id="voice-btn">🎙️ Sesle Görev</button>
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle">
+      <span>🌙/☀️</span>
+    </label>
+  </nav>
+
+  <div class="container-kanban">
+    <div class="kanban-column" data-status="todo">
+      <h2>🟢 Yapılacak</h2>
+      <div class="kanban-list" id="todo-list"></div>
+      <button class="add-task-btn" data-status="todo">+ Görev Ekle</button>
+    </div>
+    <div class="kanban-column" data-status="doing">
+      <h2>🟡 Devam Ediyor</h2>
+      <div class="kanban-list" id="doing-list"></div>
+      <button class="add-task-btn" data-status="doing">+ Görev Ekle</button>
+    </div>
+    <div class="kanban-column" data-status="done">
+      <h2>🔵 Tamamlandı</h2>
+      <div class="kanban-list" id="done-list"></div>
+      <button class="add-task-btn" data-status="done">+ Görev Ekle</button>
+    </div>
+  </div>
+
+  <!-- Alt Görev Modalı -->
+  <div id="subtask-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Alt Görevler</h3>
+      <ul id="subtask-list"></ul>
+      <input type="text" id="subtask-input" placeholder="Alt görev ekle...">
+      <button id="add-subtask-btn">Ekle</button>
+      <button id="close-modal-btn">Kapat</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
