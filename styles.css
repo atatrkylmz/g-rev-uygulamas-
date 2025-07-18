@@ -104,3 +104,52 @@ nav a.active {
   border-radius: 8px;
   width: 300px;
 }
+
+/* Genel responsive yapı */
+* {
+  box-sizing: border-box;
+}
+
+/* Mobil için nav barı dikey yapalım */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container-kanban {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .kanban-column {
+    width: 100%;
+  }
+
+  .kanban-list {
+    min-height: 150px;
+  }
+
+  .task {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  /* Butonları daha büyük yap */
+  .add-task-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Modalı küçültelim */
+  .modal-content {
+    width: 90%;
+  }
+
+  /* İstatistik grafiğini ortala ve küçült */
+  canvas#taskChart {
+    max-width: 250px !important;
+    max-height: 250px !important;
+  }
+}
